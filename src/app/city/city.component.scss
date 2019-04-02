@@ -1,0 +1,16 @@
+.city{
+    display: inline-block;
+    font-size: 35px;
+    width: auto;
+    min-width: 150px;
+    padding: 35px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    background-image: linear-gradient(0deg, #d7e1ec 0%, #ffffff 74%);
+    margin: 20px;
+    color: #7493b9;
+    box-shadow: 6px 8px 25px -3px rgba(0, 0, 0, 0.2);
+    p{
+        margin: 0;
+    }
+}

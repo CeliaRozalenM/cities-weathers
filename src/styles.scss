@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+body{
+    margin: 0;
+    text-transform: uppercase;
+}
+html{
+    height: 100%;
+    margin: 0;
+    background-color: #06bcfb;
+    background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+    font-family: 'Quicksand', sans-serif;
+    header{
+        margin: 30px 50px;
+        h1{
+            font-weight: 400;
+            display: inline-block;
+            font-size: 86px;
+            margin: 0;
+            height: 150px;
+            color: #ffffff;
+            font-weight: 500;
+            .weather{
+                font-size: 42px;
+                position: relative;
+                top: -60px;
+                left: 8px;
+                font-weight: 300;
+            }
+            .cities{
+                font-weight: 300;
+            }
+        }
+        .form{
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 20px 20px 50px;
+            border-left: 1.5px solid #ffffff;
+            font-size: 17px;
+            color: #ffffff;
+            font-family: 'Quicksand';
+            input{
+                border-radius: 5px;
+                width: 145px;
+                text-align: center;
+                padding: 10px 15px;
+                border: 1.5px solid white;
+                background-color: #ffffff38;
+                margin: 5px 0 10px 0;
+                color: #ffffff;
+                font-size: 20px;
+                font-family: 'Quicksand';
+            }
+            label{
+                font-size: 35px;
+                display: inline-block;
+            }
+            button{
+                display: block;
+                vertical-align: top;
+                color: #ffffff;
+                font-size: 20px;
+                background-color: transparent;
+                padding: 8px 58px;
+                border: 1.5px solid #ffffff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
