@@ -5,7 +5,7 @@ body{
     text-transform: uppercase;
 }
 html{
-    height: 100%;
+    min-height: 100%;
     margin: 0;
     background-color: #06bcfb;
     background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
@@ -21,9 +21,9 @@ html{
             color: #ffffff;
             font-weight: 500;
             .weather{
-                font-size: 42px;
+                font-size: 62px;
                 position: relative;
-                top: -60px;
+                top: -48px;
                 left: 8px;
                 font-weight: 300;
             }

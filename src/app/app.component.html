@@ -4,10 +4,9 @@
     <div class="form">
         <label for="">City Name</label>
         <br>
-        <input type="text" #myCity>
-        <button (click)="addCity(myCity.value)">+ ADD</button>
+        <input type="text" #cityName>
+        <button (click)="addCity(cityName.value)">+ ADD</button>
     </div>
     <!-- Atribute created in cities.component.ts -->
-    <app-cities [myCities]="cities"></app-cities>
-    <router-outlet></router-outlet>
+    <app-cities [myCities]="myCities"></app-cities>
 </header>

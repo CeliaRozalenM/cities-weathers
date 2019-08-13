@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,13 +12,14 @@ export class ApiWeatherService {
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json', responseType: 'text' })
   };
-  weatherNumber: number;
-  apiURL: string = '';
   
-  constructor(private httpClient: HttpClient) {}
+  apiURL: string = 'https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=';
+  apiKey: string ='PASTE HERE API KEY FROM OPENWEATHER';
 
-  public obtainWeather(){
-    this.httpClient.get(`${this.apiURL}`, this.httpOptions).subscribe(weatherApi => {console.log(weatherApi);this.weatherNumber = weatherApi[0].woeid});
-      return this.weatherNumber ;
+  constructor(private httpClient: HttpClient) { }
+
+  public obtainWeather(cityName:string): Observable<any>{
+    return this.httpClient.get(`${this.apiURL+cityName+'&units=metric&appid='+this.apiKey}`, this.httpOptions);
   }
+  
 }

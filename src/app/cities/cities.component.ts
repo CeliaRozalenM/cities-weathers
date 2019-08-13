@@ -9,10 +9,11 @@ import { City } from '../city';
 export class CitiesComponent implements OnInit {
 
   @Input() public myCities: Array<City>;
-
+  
   constructor() { }
-
+  
   ngOnInit() {
+
   }
 
 }

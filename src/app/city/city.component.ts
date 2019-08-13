@@ -8,7 +8,7 @@ import { City } from '../city';
 })
 export class CityComponent implements OnInit {
 
-  @Input() myCity: City;
+  @Input() city: City;
 
   constructor() { }
 

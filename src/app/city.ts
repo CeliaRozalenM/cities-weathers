@@ -1,6 +1,6 @@
 import {Weather} from './weather';
 
 export class City {
-    name: string
+    cityName: string
     weather: Weather
 }

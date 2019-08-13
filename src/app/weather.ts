@@ -1,3 +1,3 @@
 export class Weather {
-    value: number
+    value: number;
 }

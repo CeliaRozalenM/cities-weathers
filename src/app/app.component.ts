@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { City } from './city';
-import {ApiWeatherService} from './api-weather.service'
+import { ApiWeatherService } from './api-weather.service'
 import { Weather } from './weather';
 
 @Component({
@@ -12,21 +12,20 @@ import { Weather } from './weather';
 export class AppComponent {
   title = 'weather-cities';
 
-  public cities: Array<City> = [];
-  public weather: number;
+  public myCities: Array<City> = [];
+  public weatherTemp: any;
 
   constructor(private apiTemp: ApiWeatherService) { }
 
-  public addCity(name : string): void{
-    this.weather = this.apiTemp.obtainWeather();
-    this.cities.push({
-      name: name,
-      weather: {
-        value : this.weather 
-      } 
-    })
+ async addCity(cityNameInput: string) {
+    await this.apiTemp.obtainWeather(cityNameInput).subscribe(
+      (weatherApi) => {
+        this.weatherTemp = weatherApi.main.temp;
+        console.log(this.weatherTemp);
+        this.myCities.push({ cityName: cityNameInput, weather: { value: Math.round(this.weatherTemp) } });
+      }
+      );
   }
-
 
 }
 
