@@ -1,6 +1,6 @@
 # Cities & Weathers 🏘️🌡️☀️
 
-A dynamic app where you can write a city and it's added on a visual list with its weather taken from an API weather.
+A dynamic app made with **Angular** where you can write a city and it's added on a visual list with its weather taken from an API weather.
 
 
 ![Cities & Weathers](/cities-weathers.png "Cities & Weathers")
